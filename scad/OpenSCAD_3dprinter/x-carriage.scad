@@ -8,6 +8,8 @@
 use <bearing.scad>
 
 BELT_WIDTH_ADJ=0.2;
+extraEndstopTab=true;  // NV enhanced
+
 module belt_cut()
 {
     rotate([0,0,180]) 
@@ -310,6 +312,7 @@ module x_carriage()
 {
     difference()
     {
+    if(extraEndstopTab){  // NV: 
             union() {
             x_carriage_block();
         difference()
@@ -325,7 +328,11 @@ module x_carriage()
         translate([-09.5,-14,10]) cube([6,7,2.2]); 
         }
             	    
-            }
+            }    
+    }
+    else { // NV: 
+            x_carriage_block();    
+    }
             // upper motor screw
             translate([2.5,67.5,-50]) cylinder(r=1.8, h=100, $fn=30);
             translate([2.5,67.5,-0.1]) cylinder(r1=2.1,r2=1.8, h=0.5, $fn=25);
