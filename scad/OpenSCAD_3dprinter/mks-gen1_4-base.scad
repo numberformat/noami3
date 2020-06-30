@@ -9,6 +9,8 @@ use <../OpenSCAD_electronics/printer_components/mks_gen_1_4.scad>
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://prusamendel.org
 
+// NV: from MK2.5 design
+
 width=165.5;
 height=35;
 depth=103.2;
@@ -296,8 +298,8 @@ module mks_gen1_4_base()
             translate([100,21,2] ) cube([5,48,5]);     
             translate([3,21,2] ) cube([4.5,48,5]);     
 
-            #translate([width-3.5,depth-72,1.5]) rotate([0,0,90]) linear_extrude(height = 0.8) 
-            {text("NOAMi3 R1",font = "helvetica:style=Bold",size=6,center=true); }    
+            #translate([width-3.5,depth-95,1.5]) rotate([0,0,90]) linear_extrude(height = 0.8) 
+            {text("NOAMi3 MKS Gen 1.4",font = "helvetica:style=Bold",size=6,center=true); }    
             
             translate([22,depth-20,.5]) rotate([0,180,90]) linear_extrude(height = 1.8) 
             {text("NOAMi3",font = "helvetica:style=Bold",size=12,center=true); }    
