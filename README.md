@@ -18,13 +18,11 @@ This is an earlier version of the printer.
 
 ## Cost
 
-All components are easly sourced or you can buy the parts from my [ebay store](https://www.ebay.com/usr/numberf55). 
+All components are easy to source see my [ebay store](https://www.ebay.com/usr/numberf55). 
 
 
 
 ## Work in progress:
-
-June 24, 2020: Still working on getting the case for the MKS GEN 1.4 board.
 
 
 Notes:
