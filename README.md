@@ -23,8 +23,9 @@ All components are easy to source see my [ebay store](https://www.ebay.com/usr/n
 ## Work performed
 
 * 2020-03 - [Dual Z axis bed leveling](https://www.thingiverse.com/thing:4242081)
-* 2020-07 - [Modified the LCD holders to work with the older Discount Smart Controllers the ones with the variable resistor in the back.](https://www.thingiverse.com/thing:4521221)
 * 2020-06 - [New custom MKS Gen 1.4 Case](https://www.thingiverse.com/thing:3012921)
+* 2020-07 - [Modified the LCD holders to work with the older Discount Smart Controllers the ones with the variable resistor in the back.](https://www.thingiverse.com/thing:4521221)
+* 2020-07 - [Prusa i3 PSU Cover designed for the IEC320 C14 plug](https://www.thingiverse.com/thing:4290140)
 
 ## Work in progress:
 
