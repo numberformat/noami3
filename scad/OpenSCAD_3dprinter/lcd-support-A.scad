@@ -27,8 +27,8 @@ difference() {
     translate( [ -41, -45, -1 ] ) rotate([0,0,45]) cube( [ 60 , 80 , 13 ] );  
         
     // threaded rods opening
-    #translate( [ -44 , 57.5 , -1 ] ) cylinder( h = 17, r = 4.2, $fn=30);  
-    #translate( [ -29 , 71.9 , -1 ] ) cylinder( h = 17, r = 4.2, $fn=30);  
+    translate( [ -44 , 57.5 , -1 ] ) cylinder( h = 17, r = 4.2, $fn=30);  
+    translate( [ -29 , 71.9 , -1 ] ) cylinder( h = 17, r = 4.2, $fn=30);  
 
     // pcb cout out
     translate( [ 4 , 1.5 , -1 ] ) cube( [ 1.8 , 56.5 , 17 ] ); 
@@ -85,36 +85,33 @@ difference()
 
 
 
-difference() {
-    
-rotate([0,0,45]) body();
+module lcd_support_A() {  // NV: modularize it!
 
-// lightening holes
-translate( [ -42 , 15 , -1 ] ) cylinder( h = 15, r = 14, $fn=6);  
-translate( [ -24 , 7 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
-translate( [ -60 , 7 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
-translate( [ -60 , 23 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
-    
-// threaded rods corners
-translate( [ -71 , 28.5 , -1 ] ) rotate([0,0,70]) cube( [ 5 , 10 , 15 ] );   
-translate( [ -71 , 7.5 , -1 ] ) rotate([0,0,70]) cube( [ 5 , 10 , 15 ] );      
-translate( [ -80 , 29, -1 ] ) rotate([0,0,-70]) cube( [ 5 , 10 , 15 ] );   
-translate( [ -82 , 7.5 , -1 ] ) rotate([0,0,-70]) cube( [ 5 , 10 , 15 ] );      
-translate( [ -86 , 0 , -1 ] ) cube( [ 12 , 50 , 15 ] );  
-translate( [ -83 , -16 , -1 ] ) rotate([0,0,45]) cube( [ 20 , 20 , 15 ] );  
+  difference() {
+      
+  rotate([0,0,45]) body();
 
-ziptie();
-// ziptie head cutout
-translate( [ -74 , 38 , 5 ] ) rotate([90,0,0]) cylinder( h = 5, r = 3, $fn=30);  
-    
+  // lightening holes
+  translate( [ -42 , 15 , -1 ] ) cylinder( h = 15, r = 14, $fn=6);  
+  translate( [ -24 , 7 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
+  translate( [ -60 , 7 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
+  translate( [ -60 , 23 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
+      
+  // threaded rods corners
+  translate( [ -71 , 28.5 , -1 ] ) rotate([0,0,70]) cube( [ 5 , 10 , 15 ] );   
+  translate( [ -71 , 7.5 , -1 ] ) rotate([0,0,70]) cube( [ 5 , 10 , 15 ] );      
+  translate( [ -80 , 29, -1 ] ) rotate([0,0,-70]) cube( [ 5 , 10 , 15 ] );   
+  translate( [ -82 , 7.5 , -1 ] ) rotate([0,0,-70]) cube( [ 5 , 10 , 15 ] );      
+  translate( [ -86 , 0 , -1 ] ) cube( [ 12 , 50 , 15 ] );  
+  translate( [ -83 , -16 , -1 ] ) rotate([0,0,45]) cube( [ 20 , 20 , 15 ] );  
 
-
+  ziptie();
+  // ziptie head cutout
+  translate( [ -74 , 38 , 5 ] ) rotate([90,0,0]) cylinder( h = 5, r = 3, $fn=30);  
+  }  
 }
 
-
-
-
-
+lcd_support_A(); // NV: modularize it!
 
 
 
