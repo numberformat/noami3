@@ -67,7 +67,7 @@ module cutouts()
     
     // rounded side cutoff    
     translate([26.5,87.5,4.5]) rotate([0,90,0]) cylinder( h = 73,r = 3.5,$fn=30);   
-    translate([ 26.5,80,5]) cube([73,19,10]); 
+    #translate([ 26.5,80,5]) cube([73,19,10]); 
     translate([ 26.5,82.5,1]) cube([73,5,10]); 
     
     // upper hinge cut

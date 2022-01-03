@@ -7,7 +7,7 @@
 
 // NV: from MK2.5 design
 
-mk3_frame=true;
+mk3_frame=false;
 
 width=152.5; // NV: for mksgen 1.4
 depth=98.7;  // NV: for mksgen 1.4
@@ -52,7 +52,7 @@ module body()
     translate( [ 4 , 3.5 , height-3.2 ] ) rotate([0,0,0]) cylinder( h = 3.2, r1 = 1.8, r2= 3.5, $fn=30);  
     // NV: 
     
-    translate( [ width-3.5, 3.5 , height-3.2 ] ) rotate([0,0,0]) cylinder( h = 3.2, r1 = 1.8, r2= 3.5, $fn=30); 
+    #translate( [ width-3.5, 3.5 , height-3.2 ] ) rotate([0,0,0]) cylinder( h = 3.2, r1 = 1.8, r2= 3.5, $fn=30); 
     translate( [ width-(lower_hinge_offset+3.5), 3.5 , height-3.2 ] ) rotate([0,0,0]) cylinder( h = 3.2, r1 = 1.8, r2= 3.5, $fn=30); 
 }
 
@@ -99,7 +99,7 @@ module cutouts()
     translate( [2 , 80, 6] ) cube( [ 19.5, 10 , 10 ] );       
     translate( [2 , depth-1.2, 3] ) rotate([50,0,0]) cube( [ 65.5, 12 , 5 ] );     
     translate( [ 2 , depth , 4.5 ] ) rotate([0,90,0]) cylinder( h = 170, r = 2.7, $fn=30);  // NV: made hole bigger
-    #translate([38.75,depth,4.5]) rotate([0,90,0]) cylinder( h = 28.75,r = 5,$fn=30);  
+    translate([38.75,depth,4.5]) rotate([0,90,0]) cylinder( h = 28.75,r = 5,$fn=30);  
 
     // hinge hole
     translate( [ 2 , depth , 4.5 ] ) rotate([0,90,0]) cylinder( h = 200, r = 2.6, $fn=30);  
@@ -137,15 +137,25 @@ difference()
 
 }
  
-// test fit before printing
-  //use<mks-gen1_4-base.scad>
-  //%rotate([180,0,0]) translate([0,-103.2,-47.1]) mks_gen1_4_base();
+// test fit helpers
+
+  use<mks-gen1_4-base.scad>
+  if(mk3_frame) {
+    rotate([180,0,0]) translate([0,-103.2,-47.1]) mks_gen1_4_base();
+  } else {
+    rotate([180,0,0]) translate([0,-103.2,-52.1]) mks_gen1_4_base();
+  }
   //use<Rambo-doors.scad>
   //translate([0,11.2,0]) RAMBo_doors();
-  //use<mks-gen1_4-Hinges.scad>
-  //rotate([90,0,-90]) translate([-depth,-1.5,-152.5-9.1]) lower_hinge();
-  //rotate([-90,0,-90]) translate([-depth,-4.5,152.5-106]) upper_hinge();
-  //translate([225.4,103,47.5]) rotate([90,90,180]) import("H:/hobby/3dPrinting/noami3PruisaMK2_incoming/MK3_frame.stl");
+  use<mks-gen1_4-Hinges.scad>
+  rotate([90,0,-90]) translate([-depth,-1.5,-152.5-9.1]) lower_hinge();
+  rotate([-90,0,-90]) translate([-depth,-4.5,152.5-106]) upper_hinge();
+  if(mk3_frame) {
+    %translate([225.4,103,47.5]) rotate([90,90,180]) import("H:/hobby/3dPrinting/noami3PruisaMK2_incoming/MK3_frame.stl");
+  } else {
+    %translate([43.4,103,52.5]) rotate([90,90,180]) import("H:/hobby/3dPrinting/noami3PruisaMK2_incoming/MK2S_frame.stl");
+  }
+
 
   //translate([0,100,-2.5]) cube([10,10,50]);
 mks_gen1_4_doors();

@@ -278,6 +278,7 @@ module RAMBo_base()
 RAMBo_base();
 
 
+translate([67,51,10]) rotate(90) %import("lib/SKR_1.3_-_Low_Fi.stl");
 
 
 

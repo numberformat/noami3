@@ -4,21 +4,20 @@
 
 This is a remix of the Prusa i3 printer.
 
-![](images/20180710_202544.jpg)
-This is an earlier version of the printer.
+![](images/IMG_20220102_211943277.jpg)
 
 ## The goals
 
 * To make the process of building your own printer easy and in-expensive by using lower cost off the shelf components
     - RAMPS compatible main boards
-    - MKS Gen 1.4
+    - MKS Gen 1.4 or SKR 1.3
 * Rework some of the design decisions that were made like eliminating the inductive PINDA probe sensor and Bed levelling using multiple independent Z motors.
 * Apply latest advancements and make them work with all i3 based printers.
     - Examples include: filament runout sensor, mk3s style extruder
 
 ## Cost
 
-All components are easy to source see my [ebay store](https://www.ebay.com/usr/numberf55). 
+All components are easy to source on ebay and other places.
 
 ## Work performed
 
@@ -26,6 +25,8 @@ All components are easy to source see my [ebay store](https://www.ebay.com/usr/n
 * 2020-06 - [New custom MKS Gen 1.4 Case](https://www.thingiverse.com/thing:3012921)
 * 2020-07 - [Modified the LCD holders to work with the older Discount Smart Controllers the ones with the variable resistor in the back.](https://www.thingiverse.com/thing:4521221)
 * 2020-07 - [Prusa i3 PSU Cover designed for the IEC320 C14 plug](https://www.thingiverse.com/thing:4290140)
+* 2021-01 - [Setup instructions for the SKR 1.3 with sensorless homing and other advanced features.](skr13.md)
+* 2021-12 - Upgraded to the volcano hot end. Conversion made easy by dual z axis bed leveling. I just installed 10mm longer screws
 
 ## Work in progress:
 
